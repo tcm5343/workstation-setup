@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# backs up my primary drive to the secondary drive
+
+# backup USB drive to Primary drive
+if [[ -d "/run/media/miller/miller64" ]] && [[ -d "/media/miller/Primary" ]]
+then
+    sudo rsync -hrva --delete --exclude-from='/media/miller/Primary/exclude.txt' /run/media/miller/miller64/ /media/miller/Primary/miller64
+else 
+    echo "USB backup skipped"
+fi
+
+# backup Primary drive to Secondary drive
+if [[ -d "/media/miller/Primary" ]] && [[ -d "/media/miller/Secondary" ]]
+then
+    sudo rsync -hrva --delete --exclude-from='/media/miller/Primary/exclude.txt' --filter 'protect /media/miller/Secondary/Volumes' /media/miller/Primary/ /media/miller/Secondary
+else 
+    echo "Primary drive backup skipped"
+fi
+
+# output final report to user
+echo -e "\nrsync has completed the backup:"
+
+[[ -d "/media/miller/miller64" ]] && [[ -d "/media/miller/Primary" ]] && echo "USB backup complete"
+[[ -d "/media/miller/Primary" ]] && [[ -d "/media/miller/Secondary" ]] && echo "Primary drive backup complete"
+

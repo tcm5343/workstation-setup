@@ -7,14 +7,15 @@ sudo apt install snapd -y
 
 sudo apt install youtube-dl git numlockx tree ffmpeg apt-transport-https vlc python3-pip \
     tmux thunderbird rsync xfce4-power-manager xfce4-volumed zsh jupyter-notebook \
-    docker docker-compose wget gpg audacity diffutils digikam libimage-exiftool-perl flatpak \
+    docker docker-compose wget gpg audacity diffutils digikam libimage-exiftool-perl flatpak qbittorrent \
     --fix-missing -y
+
+sudo flatpak install flathub com.bitwarden.desktop -y
 
 sudo snap install pycharm-community --classic
 sudo snap install intellij-idea-community --classic
 sudo snap install task --classic
 sudo snap install node --classic
-sudo snap install bitwarden
 
 # anydesk
 if ! command -v anydesk &> /dev/null; then

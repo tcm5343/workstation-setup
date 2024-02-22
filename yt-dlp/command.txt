@@ -1,0 +1,1 @@
+yt-dlp --config-location ~/dev/workstation-setup/yt-dlp/yt-dlp.conf S9-Sv_YJ_fg

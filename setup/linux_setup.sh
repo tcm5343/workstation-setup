@@ -8,6 +8,7 @@ sudo apt install snapd -y
 sudo apt install youtube-dl git numlockx tree ffmpeg apt-transport-https vlc python3-pip \
     tmux thunderbird rsync xfce4-power-manager xfce4-volumed zsh jupyter-notebook \
     docker docker-compose wget gpg audacity diffutils digikam libimage-exiftool-perl flatpak qbittorrent \
+    smartmontools \
     --fix-missing -y
 
 sudo flatpak install flathub com.bitwarden.desktop -y

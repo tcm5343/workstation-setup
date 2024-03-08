@@ -2,3 +2,6 @@
 	helper = store
 [push]
     default = current
+[alias]
+    git = !git
+

@@ -23,4 +23,3 @@ echo -e "\nrsync has completed the backup:"
 
 [[ -d "/media/miller/miller64" ]] && [[ -d "/media/miller/Primary" ]] && echo "USB backup complete"
 [[ -d "/media/miller/Primary" ]] && [[ -d "/media/miller/Secondary" ]] && echo "Primary drive backup complete"
-

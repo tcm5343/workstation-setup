@@ -2,6 +2,13 @@
 	helper = store
 [push]
     default = current
+[user]
+	email = 48961675+tcm5343@users.noreply.github.com
+	name = tcm5343
 [alias]
     git = !git
+[pull]
+	rebase = false
+[core]
+	editor = vim
 

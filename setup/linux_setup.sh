@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo add-apt-repository ppa:phoerious/keepassxc
+
 sudo apt-get upgrade -y && sudo apt-get update -y
 
 sudo rm /etc/apt/preferences.d/nosnap.pref
@@ -8,7 +10,7 @@ sudo apt install snapd -y
 sudo apt install youtube-dl git numlockx tree ffmpeg apt-transport-https vlc python3-pip \
     tmux thunderbird rsync xfce4-power-manager xfce4-volumed zsh jupyter-notebook \
     docker docker-compose wget gpg audacity diffutils digikam libimage-exiftool-perl flatpak qbittorrent \
-    smartmontools \
+    smartmontools podman keepassxc \
     --fix-missing -y
 
 sudo flatpak install flathub com.bitwarden.desktop -y

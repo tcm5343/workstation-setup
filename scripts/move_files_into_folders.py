@@ -1,14 +1,14 @@
 import os
 import json
-import ffmpeg
-import json
-import re
-import hashlib
 from typing import List
+import re
+
+import ffmpeg
+import hashlib
 import shutil
 
 # yt_dlp_dir = '/home/miller/Desktop/testing'
-yt_dlp_dir = '/media/miller/Primary/yt-dlp'
+yt_dlp_dir = '/home/miller/dev/workstation-setup/'
 
 
 def move_file_to_directory(source_file, destination_directory, filename):

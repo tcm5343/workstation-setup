@@ -1,0 +1,13 @@
+Android/
+DCIM/
+Download
+Documents/
+Music/
+Notes/
+OpenTracksExports/
+Pictures/
+signal_backups/
+contacts.vcf
+*.zip
+NewPipeData*
+

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-sudo add-apt-repository ppa:phoerious/keepassxc
+sudo add-apt-repository --yes ppa:phoerious/keepassxc
+sudo apt-add-repository --yes ppa:fish-shell/release-3
 
 sudo apt-get upgrade -y && sudo apt-get update -y
 
@@ -10,7 +11,7 @@ sudo apt install snapd -y
 sudo apt install youtube-dl git numlockx tree ffmpeg apt-transport-https vlc python3-pip \
     tmux thunderbird rsync xfce4-power-manager xfce4-volumed zsh jupyter-notebook \
     docker docker-compose wget gpg audacity diffutils digikam libimage-exiftool-perl flatpak qbittorrent \
-    smartmontools podman keepassxc \
+    smartmontools podman keepassxc fish \
     --fix-missing -y
 
 sudo flatpak install flathub com.bitwarden.desktop -y
@@ -67,5 +68,6 @@ fi
 # kleopatra
 # insomnium
 # golang
+# tex
 
 exit 0

@@ -20,8 +20,8 @@ echo -e "\nStarting backup process..."
 # backup USB drive to Primary drive
 if [[ -d "$USB_SRC" && -d "$PRIMARY" ]]; then
   echo "Backing up USB to Primary..."
-  sudo rsync "${RSYNC_OPTS[@]}" "$USB_SRC/" "$PRIMARY/miller64"
   tree "$PRIMARY/miller64" > "$PRIMARY/miller64/tree.txt"
+  sudo rsync "${RSYNC_OPTS[@]}" "$USB_SRC/" "$PRIMARY/miller64"
   USB_STATUS="complete"
 else
   echo "USB backup skipped (drive not found)"
@@ -31,8 +31,8 @@ fi
 # backup Primary drive to Secondary drive
 if [[ -d "$PRIMARY" && -d "$SECONDARY" ]]; then
   echo "Backing up Primary to Secondary..."
-  sudo rsync "${RSYNC_OPTS[@]}" "$PRIMARY/" "$SECONDARY"
   tree "$PRIMARY" > "$PRIMARY/tree.txt"
+  sudo rsync "${RSYNC_OPTS[@]}" "$PRIMARY/" "$SECONDARY"
   PRIMARY_STATUS="complete"
 else
   echo "Primary drive backup skipped (drive not found)"

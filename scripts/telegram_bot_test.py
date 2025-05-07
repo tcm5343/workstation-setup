@@ -8,8 +8,8 @@ message = 'hi'
 api_url = f'https://api.telegram.org/bot{token}/sendMessage'
 
 data = {
-    'chat_id': user_id, 
-    'text': message, 
+    'chat_id': user_id,
+    'text': message,
     'parse_mode': 'MarkdownV2'
 }
 

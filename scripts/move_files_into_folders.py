@@ -45,7 +45,7 @@ def move_files_to_sub_folders():
                     newFolderName = f'{videoMetadata["format"]["tags"]["DATE"]} - {sanitizedTitle}'
                     videoExt = file[file.rfind('.'):]
                     newFileName = sanitizedTitle + videoExt
-                    
+
                     if os.path.dirname(subdir) == yt_dlp_dir:
                         move_file_to_directory(
                             filePath,
@@ -71,7 +71,7 @@ def get_files_at_level(level: int):
                 # print(filePath)
                 res.append(filePath)
     return res
-    
+
 
 def map_id_to_data():
     res = {}
@@ -149,7 +149,7 @@ if __name__ == "__main__":
             ids.append(id+'\n')
     with open('/media/miller/Primary/yt-dlp/channels.txt', "w") as file:
         file.writelines(ids)
-    
+
     # for id in leftover_ids:
     #     if id in deleted.keys():
             # print(id)
